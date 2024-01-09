@@ -1,7 +1,5 @@
 package com.example.tabkha.adapter
 
-// RecipeAdapter.kt
-
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -35,11 +33,27 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
     inner class RecipeViewHolder(private val binding: ItemRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        init {
+            // Set click listeners for image, text, and favorite button
+            binding.imageRecipe.setOnClickListener { onImageOrNameClick() }
+            binding.textRecipeName.setOnClickListener { onImageOrNameClick() }
+            binding.btnFavorite.setOnClickListener { onFavoriteClick() }
+        }
+
         fun bind(recipe: Recipe) {
             binding.imageRecipe.setImageResource(recipe.imageResId)
             binding.textRecipeName.text = recipe.name
-            // Set onClickListener for the favorite button if needed
-            // binding.btnFavorite.setOnClickListener { /* Handle click */ }
+            // Set other data as needed
+        }
+
+        // TODO
+        private fun onImageOrNameClick() {
+            // Handle click on image (Navigate to detailed recipe page, for example)
+        }
+
+        // TODO
+        private fun onFavoriteClick() {
+            // Handle click on favorite button
         }
     }
 }

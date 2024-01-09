@@ -35,10 +35,8 @@ class HomeFragment : Fragment() {
 
         // Set sample data for testing
         val recipes = mutableListOf<Recipe>() // Replace with your actual data
-        for (i in 1..10) {
-            recipes.add(Recipe("Recipe $i", R.drawable.recipe_img_koshari_drawable))
-        }
-
+        recipes.add(Recipe("Koshari", R.drawable.recipe_img_koshari_drawable))
+        recipes.add(Recipe("Test", R.drawable.ic_launcher_background))
         adapter.submitList(recipes)
 
         return root
