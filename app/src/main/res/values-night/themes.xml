@@ -1,16 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Night theme -->
     <style name="Theme.Tabkha" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- ... other theme attributes ... -->
+
+        <!-- Customize your night theme here. -->
+        <item name="colorPrimary">@color/night_colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/night_colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/night_colorOnPrimary</item>
+
+        <!-- Add your other night theme attributes here -->
+        <!-- For example, if you have a custom searchViewStyle for night mode -->
+        <item name="searchViewStyle">@style/MySearchView</item>
     </style>
+
+    <!-- Define your custom SearchView style for night mode -->
+    <!-- themes.xml (night) -->
+    <style name="MySearchView" parent="Widget.Material3.SearchView">
+        <item name="searchViewBackground">@drawable/night_round_searchview</item>
+<!--        <item name="hintTextColor">@color/white</item>-->
+    </style>
+
 </resources>

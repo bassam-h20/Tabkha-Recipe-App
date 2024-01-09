@@ -1,42 +1,66 @@
 package com.example.tabkha.ui.settings
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.widget.SwitchCompat
 import com.example.tabkha.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
 
     private var _binding: FragmentSettingsBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private lateinit var switchDarkMode: SwitchCompat
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val settingsViewModel =
-            ViewModelProvider(this).get(SettingsViewModel::class.java)
-
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSettings
-        settingsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        switchDarkMode = binding.switchDarkMode
+        sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
+
+        // Load the dark mode state from SharedPreferences
+        switchDarkMode.isChecked = sharedPreferences.getBoolean(DARK_MODE_KEY, false)
+
+        switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            // Save the dark mode state to SharedPreferences
+            with(sharedPreferences.edit()) {
+                putBoolean(DARK_MODE_KEY, isChecked)
+                apply()
+            }
+
+            // Apply dark mode to the app
+            applyDarkMode(isChecked)
         }
+
         return root
+    }
+
+    private fun applyDarkMode(isDarkMode: Boolean) {
+         if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+         } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        private const val DARK_MODE_KEY = "dark_mode"
     }
 }
