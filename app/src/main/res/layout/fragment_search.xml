@@ -33,9 +33,7 @@
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:elevation="4dp"
-        android:background="@drawable/night_round_searchview"
-        tools:ignore="MissingConstraints">
-    </SearchView>
+        tools:ignore="MissingConstraints" />
 
 
 

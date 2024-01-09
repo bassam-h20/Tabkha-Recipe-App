@@ -61,6 +61,6 @@ class SettingsFragment : Fragment() {
     }
 
     companion object {
-        private const val DARK_MODE_KEY = "dark_mode"
+        const val DARK_MODE_KEY = "dark_mode"
     }
 }

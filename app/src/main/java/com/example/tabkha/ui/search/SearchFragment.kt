@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.tabkha.R
 import com.example.tabkha.databinding.FragmentSearchBinding
 import android.util.Log
+import com.example.tabkha.ui.settings.SettingsFragment
 
 class SearchFragment : Fragment() {
 
@@ -34,22 +35,24 @@ class SearchFragment : Fragment() {
         // Access the SearchView
         val searchView = binding.searchView
 
+        // Retrieve dark mode status from shared preferences
+        val isDarkMode = getDarkModeStatus()
+
         // Customize the SearchView based on theme mode
-        val uiModeManager = requireContext().getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
-        if (uiModeManager.nightMode == Configuration.UI_MODE_NIGHT_YES) {
+        if (isDarkMode) {
             // Dark mode is active, set dark mode drawable
             searchView.setBackgroundResource(R.drawable.night_round_searchview)
-            searchView.findViewById<EditText>(androidx.appcompat.R.id.search_src_text)?.setTextColor(
-                ContextCompat.getColor(requireContext(), android.R.color.white)
-            )
         } else {
             // Light mode is active, set light mode drawable
             searchView.setBackgroundResource(R.drawable.round_searchview)
         }
 
-//        searchView.clearFocus()
-
         return root
+    }
+
+    private fun getDarkModeStatus(): Boolean {
+        val sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean(SettingsFragment.DARK_MODE_KEY, false)
     }
 
     override fun onDestroyView() {

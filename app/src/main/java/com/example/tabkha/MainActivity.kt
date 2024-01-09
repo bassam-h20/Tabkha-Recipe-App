@@ -13,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.tabkha.databinding.ActivityMainBinding
+import com.example.tabkha.ui.settings.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -53,5 +54,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
+        val sharedPreferences = getPreferences(Context.MODE_PRIVATE)
+        val isDarkMode = sharedPreferences.getBoolean(SettingsFragment.DARK_MODE_KEY, false)
+
+        AppCompatDelegate.setDefaultNightMode(
+            if (isDarkMode) {
+                AppCompatDelegate.MODE_NIGHT_YES
+            } else {
+                AppCompatDelegate.MODE_NIGHT_NO
+            }
+        )
     }
 }
