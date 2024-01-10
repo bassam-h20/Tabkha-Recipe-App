@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tabkha"
         tools:targetApi="31">
+
+        <!-- Add the RecipeDetailActivity entry here -->
+        <activity
+            android:name=".RecipeDetailActivity"
+            android:label="Recipe Detail">
+            <!-- Add any intent filters or additional configuration as needed -->
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

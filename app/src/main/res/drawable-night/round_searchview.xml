@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- night_round_searchview.xml -->
+<!-- round_searchview.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#2D2D2D" />
     <corners android:radius="80dp" />

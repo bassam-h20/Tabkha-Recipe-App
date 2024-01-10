@@ -10,7 +10,7 @@
 
         <!-- Add your other theme attributes here -->
         <!-- For example, if you have a custom searchViewStyle -->
-        <item name="searchViewStyle">@style/MySearchView</item>
+
     </style>
 
     <!-- Define your custom SearchView style -->

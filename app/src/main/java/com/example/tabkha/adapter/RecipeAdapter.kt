@@ -1,9 +1,11 @@
 package com.example.tabkha.adapter
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tabkha.RecipeDetailActivity
 import com.example.tabkha.databinding.ItemRecipeBinding
 import com.example.tabkha.model.Recipe
 
@@ -35,8 +37,8 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
         init {
             // Set click listeners for image, text, and favorite button
-            binding.imageRecipe.setOnClickListener { onImageOrNameClick() }
-            binding.textRecipeName.setOnClickListener { onImageOrNameClick() }
+            binding.imageRecipe.setOnClickListener { onImageClick() }
+            binding.textRecipeName.setOnClickListener { onTextNameClick() }
             binding.btnFavorite.setOnClickListener { onFavoriteClick() }
         }
 
@@ -46,14 +48,33 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
             // Set other data as needed
         }
 
-        // TODO
-        private fun onImageOrNameClick() {
-            // Handle click on image (Navigate to detailed recipe page, for example)
+        private fun onImageClick() {
+            navigateToRecipeDetailPage(adapterPosition)
         }
 
-        // TODO
+        private fun onTextNameClick() {
+            navigateToRecipeDetailPage(adapterPosition)
+        }
+
         private fun onFavoriteClick() {
             // Handle click on favorite button
+        }
+
+        private fun navigateToRecipeDetailPage(position: Int) {
+            val context = binding.root.context
+            val recipe = recipes[position]
+
+            // Create intent to start RecipeDetailActivity
+            val intent = Intent(context, RecipeDetailActivity::class.java).apply {
+                putExtra("recipe_name", recipe.name)
+                putExtra("recipe_description", recipe.description)
+                putExtra("recipe_ingredients", recipe.ingredients)
+                putExtra("recipe_steps", recipe.steps)
+                putExtra("image_res_id", recipe.imageResId)
+            }
+
+            // Start the activity
+            context.startActivity(intent)
         }
     }
 }

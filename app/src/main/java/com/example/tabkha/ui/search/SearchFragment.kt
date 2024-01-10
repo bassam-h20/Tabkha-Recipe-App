@@ -35,24 +35,7 @@ class SearchFragment : Fragment() {
         // Access the SearchView
         val searchView = binding.searchView
 
-        // Retrieve dark mode status from shared preferences
-        val isDarkMode = getDarkModeStatus()
-
-        // Customize the SearchView based on theme mode
-        if (isDarkMode) {
-            // Dark mode is active, set dark mode drawable
-            searchView.setBackgroundResource(R.drawable.night_round_searchview)
-        } else {
-            // Light mode is active, set light mode drawable
-            searchView.setBackgroundResource(R.drawable.round_searchview)
-        }
-
         return root
-    }
-
-    private fun getDarkModeStatus(): Boolean {
-        val sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
-        return sharedPreferences.getBoolean(SettingsFragment.DARK_MODE_KEY, false)
     }
 
     override fun onDestroyView() {

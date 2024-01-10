@@ -3,6 +3,7 @@ package com.example.tabkha.ui.settings
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,7 @@ class SettingsFragment : Fragment() {
             with(sharedPreferences.edit()) {
                 putBoolean(DARK_MODE_KEY, isChecked)
                 apply()
+                Log.d("DarkMode", "Saved Dark Mode State: $isChecked")
             }
 
             // Apply dark mode to the app
@@ -50,8 +52,11 @@ class SettingsFragment : Fragment() {
     private fun applyDarkMode(isDarkMode: Boolean) {
          if (isDarkMode) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            Log.d("DarkMode", "Dark Mode Applied")
          } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            Log.d("DarkMode", "Light Mode Applied")
+
          }
     }
 
@@ -62,5 +67,6 @@ class SettingsFragment : Fragment() {
 
     companion object {
         const val DARK_MODE_KEY = "dark_mode"
+        const val PREFERENCES_FILE = "app_preferences"
     }
 }

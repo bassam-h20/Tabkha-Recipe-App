@@ -10,15 +10,11 @@
 
         <!-- Add your other night theme attributes here -->
         <!-- For example, if you have a custom searchViewStyle for night mode -->
-        <item name="searchViewStyle">@style/MySearchView</item>
+
     </style>
 
     <!-- Define your custom SearchView style for night mode -->
     <!-- themes.xml (night) -->
-    <style name="MySearchView" parent="Widget.Material3.SearchView">
-        <item name="searchViewBackground">@drawable/night_round_searchview</item>
-<!--        <item name="hintTextColor">@color/white</item>-->
-    </style>
 
     <style name="SwitchTheme" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="colorControlActivated">@color/night_colorPrimary</item>
