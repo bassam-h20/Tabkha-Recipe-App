@@ -1,11 +1,9 @@
 package com.example.tabkha
 
-import android.app.Activity
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tabkha.databinding.ActivityRecipeDetailBinding
-import com.example.tabkha.ui.settings.SettingsFragment
 
 // Import necessary packages
 

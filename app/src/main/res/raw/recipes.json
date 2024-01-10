@@ -1,9 +1,16 @@
 [
   {
-    "recipeName": "Koshari",
-    "recipeDescription": "Koshari is an Egyptian dish that is widely known in Arab countries. The iconic dish is a harmonious blend of ingredients weaving together a rich culinary heritage of Egypt.",
-    "recipeIngredients": "115g lentils\n300g Rice\nMacaroni Pasta\n2 Onions\n80g Flour\n4 Garlic cloves\n1½ tsp Ground Coriander\n1 can of 800g Tomato Sauce\n2 tablespoon White Vinegar\n½ tsp each of salt and pepper\n½ - 1 tablespoon red pepper flakes (optional)",
-    "recipeSteps": "",
+    "name": "Koshari",
+    "description": "Koshari is an Egyptian dish that is widely known in Arab countries. The iconic dish is a harmonious blend of ingredients weaving together a rich culinary heritage of Egypt.",
+    "ingredients": "115g lentils\n300g Rice\nMacaroni Pasta\n2 Onions\n80g Flour\n4 Garlic cloves\n1½ tsp Ground Coriander\n1 can of 800g Tomato Sauce\n2 tablespoon White Vinegar\n½ tsp each of salt and pepper\n½ - 1 tablespoon red pepper flakes (optional)",
+    "steps": "For onion topping:\n\n1. Grab one onion and cut into thin rings\n2. Season them with salt\n3. Coat the onion rings evenly with flour and make sure to shake off any excess\n4. In a large pot on medium heat add cooking oil and fry the onion rings\n5. Stir regulary and ensure the onions are crispy but not burned usually takes 15 – 20 minutes\n\n\nTomato sauce:\n\n6. Heat one tablespoon of cooking oil and add a grated onion, cook until onion turns golden\n7. Add minced garlic, coriander and red pepper flakes and sauté until fragrant\n8. Introduce tomato sauce and pinch of salt and bring the mixture to a simmer for 15 minutes\n9. Stir in the white vinegar, put heat on low and cover it\n\n\nPrepare the koshari:\n\n10. Bring the rinsed lentils and 4 cups of water to a boil on high heat then reduce the heat to low allowing the lentils to cook until tender (15 minutes).\n11. Drain the lentils and put aside\n12. Soak the rice for 15 minutes in hot water then drain it\n13. In a large pot drop the rice and lentils with 1 tablespoon cooking oil, salt, pepper and coriander, cook and stir regularly for 3 minutes\n14. Add 3 cups of water to the rice and lentils and let boil on medium high heat for 5 -8 minutes\n15. Cover the pot and allow it to cook for 20 minutes to assure the lentils and rice are fully cooked and put aside\n16. Simultaneously boil the pasta until soft then drain\n\n\nPutting it together:\n\n1.  Grab a large platter and place the rice and lentils at the base\n2. Top with the drained pasta the tomato sauce\n3. Finally garnish with the crispy onions\n",
+    "imageResId": "2131165420"
+  },
+  {
+    "name": "Test",
+    "description": "Test",
+    "ingredients": "Test",
+    "steps": "Test",
     "imageResId": "2131165420"
   }
 ]
