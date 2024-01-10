@@ -37,6 +37,11 @@ class HomeFragment : Fragment() {
         val adapter = RecipeAdapter() // Create your custom adapter
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        /////////////////////////////////
+        //     Debug Image Id Here    //
+        ////////////////////////////////
+
+//        Log.d("#### IMAGE ID ####", getDrawableId("/* DRAWABLE NAME HERE */").toString())
 
         val recipes = parseJsonFile()
         adapter.submitList(recipes)
