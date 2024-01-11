@@ -1,17 +1,27 @@
 package com.example.tabkha.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tabkha.RecipeDetailActivity
 import com.example.tabkha.databinding.ItemRecipeBinding
 import com.example.tabkha.model.Recipe
+import com.example.tabkha.R
 
-class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
+class RecipeAdapter(private val context: Context, private val onFavoriteClick: (Recipe) -> Unit) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
     private var recipes: List<Recipe> = emptyList()
+    val favoritesSet: MutableSet<String> = mutableSetOf()
+
+    init {
+        // Load favorites from SharedPreferences
+        val preferences: SharedPreferences = context.getSharedPreferences("Favorites", Context.MODE_PRIVATE)
+        favoritesSet.addAll(preferences.getStringSet("favoritesSet", mutableSetOf()) ?: emptySet())
+    }
 
     @SuppressLint("NotifyDataSetChanged")
     fun submitList(newList: List<Recipe>) {
@@ -45,7 +55,13 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
         fun bind(recipe: Recipe) {
             binding.imageRecipe.setImageResource(recipe.imageResId)
             binding.textRecipeName.text = recipe.name
-            // Set other data as needed
+
+            // Set favorite icon based on the current status
+            if (isFavorite(recipe)) {
+                binding.btnFavorite.setImageResource(R.drawable.ic_favorite_red_filled_24dp)
+            } else {
+                binding.btnFavorite.setImageResource(R.drawable.ic_favorite_24dp)
+            }
         }
 
         private fun onImageClick() {
@@ -57,7 +73,21 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
         }
 
         private fun onFavoriteClick() {
-            // Handle click on favorite button
+            val recipe = recipes[adapterPosition]
+
+            // Toggle the favorite status
+            if (isFavorite(recipe)) {
+                favoritesSet.remove(recipe.name)
+            } else {
+                favoritesSet.add(recipe.name)
+            }
+
+            // Save the updated favorites to SharedPreferences
+            val preferences: SharedPreferences = context.getSharedPreferences("Favorites", Context.MODE_PRIVATE)
+            preferences.edit().putStringSet("favoritesSet", favoritesSet).apply()
+
+            // Update the favorite icon
+            notifyItemChanged(adapterPosition)
         }
 
         private fun navigateToRecipeDetailPage(position: Int) {
@@ -75,6 +105,10 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
             // Start the activity
             context.startActivity(intent)
+        }
+
+        fun isFavorite(recipe: Recipe): Boolean {
+            return favoritesSet.contains(recipe.name)
         }
     }
 }
