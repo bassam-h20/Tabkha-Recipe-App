@@ -4,7 +4,7 @@
         <!-- ... other theme attributes ... -->
 
         <!-- Customize your night theme here. -->
-        <item name="colorPrimary">@color/night_colorPrimary</item>
+        <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/night_colorPrimaryVariant</item>
         <item name="colorOnPrimary">@color/night_colorOnPrimary</item>
 
@@ -17,7 +17,7 @@
     <!-- themes.xml (night) -->
 
     <style name="SwitchTheme" parent="Widget.AppCompat.CompoundButton.Switch">
-        <item name="colorControlActivated">@color/night_colorPrimary</item>
+        <item name="colorControlActivated">@color/yellow</item>
     </style>
 
 </resources>
