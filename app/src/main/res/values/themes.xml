@@ -4,7 +4,7 @@
         <!-- ... other theme attributes ... -->
 
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
 
