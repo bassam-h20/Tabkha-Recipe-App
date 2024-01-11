@@ -6,14 +6,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tabkha.RecipeUtils
 import com.example.tabkha.adapter.RecipeAdapter
 import com.example.tabkha.databinding.FragmentFavoritesBinding
-import com.example.tabkha.ui.home.HomeFragment
 import androidx.recyclerview.widget.GridLayoutManager
 
 class FavoritesFragment : Fragment() {

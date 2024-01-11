@@ -15,7 +15,11 @@ import com.example.tabkha.R
 class RecipeAdapter(private val context: Context, private val onFavoriteClick: (Recipe) -> Unit) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
     private var recipes: List<Recipe> = emptyList()
+    private var filteredRecipes: MutableList<Recipe> = mutableListOf()
+
     val favoritesSet: MutableSet<String> = mutableSetOf()
+
+    //bassam
 
     init {
         // Load favorites from SharedPreferences
@@ -26,6 +30,10 @@ class RecipeAdapter(private val context: Context, private val onFavoriteClick: (
     @SuppressLint("NotifyDataSetChanged")
     fun submitList(newList: List<Recipe>) {
         recipes = newList
+        //bassam
+        filteredRecipes.clear()
+        filteredRecipes.addAll(recipes)
+        //
         notifyDataSetChanged()
     }
 
