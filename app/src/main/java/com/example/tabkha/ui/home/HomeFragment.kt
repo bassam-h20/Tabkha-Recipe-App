@@ -42,7 +42,12 @@ class HomeFragment : Fragment() {
         val recipes = RecipeUtils.parseJsonFile(resources)
         adapter.submitList(recipes)
 
-        Log.d("###################################", getDrawableId("recipe_img_koshari_drawable").toString())
+        Log.d("Adas", getDrawableId("adas").toString())
+        Log.d("Arayes", getDrawableId("arayes").toString())
+        Log.d("Koshari", getDrawableId("koshari").toString())
+        Log.d("Majboos", getDrawableId("majboos").toString())
+        Log.d("Tabbouleh", getDrawableId("tabbouleh").toString())
+
 
         return root
     }
