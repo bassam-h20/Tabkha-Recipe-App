@@ -8,11 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tabkha.RecipeUtils
 import com.example.tabkha.adapter.RecipeAdapter
 import com.example.tabkha.databinding.FragmentFavoritesBinding
-import androidx.recyclerview.widget.GridLayoutManager
 
 class FavoritesFragment : Fragment() {
 

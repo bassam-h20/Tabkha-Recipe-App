@@ -7,10 +7,10 @@ import android.content.SharedPreferences
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.tabkha.R
 import com.example.tabkha.RecipeDetailActivity
 import com.example.tabkha.databinding.ItemRecipeBinding
 import com.example.tabkha.model.Recipe
-import com.example.tabkha.R
 
 class RecipeAdapter(private val context: Context, private val onFavoriteClick: (Recipe) -> Unit) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
 
@@ -43,9 +43,12 @@ class RecipeAdapter(private val context: Context, private val onFavoriteClick: (
         return RecipeViewHolder(binding)
     }
 
+    @SuppressLint("DiscouragedApi")
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipes[position]
-        holder.bind(recipe)
+        val imageResId = holder.itemView.context.resources.getIdentifier(recipe.imageResId, "drawable", holder.itemView.context.packageName)
+
+        holder.bind(recipe, imageResId)
     }
 
     override fun getItemCount(): Int = recipes.size
@@ -60,8 +63,8 @@ class RecipeAdapter(private val context: Context, private val onFavoriteClick: (
             binding.btnFavorite.setOnClickListener { onFavoriteClick() }
         }
 
-        fun bind(recipe: Recipe) {
-            binding.imageRecipe.setImageResource(recipe.imageResId)
+        fun bind(recipe: Recipe, imageResId: Int) {
+            binding.imageRecipe.setImageResource(imageResId)
             binding.textRecipeName.text = recipe.name
 
             // Set favorite icon based on the current status

@@ -4,7 +4,7 @@
     "description": "Koshari is an Egyptian dish that is widely known in Arab countries. The iconic dish is a harmonious blend of ingredients weaving together a rich culinary heritage of Egypt.",
     "ingredients": "115g lentils\n300g Rice\nMacaroni Pasta\n2 Onions\n80g Flour\n4 Garlic cloves\n1½ tsp Ground Coriander\n1 can of 800g Tomato Sauce\n2 tablespoon White Vinegar\n½ tsp each of salt and pepper\n½ - 1 tablespoon red pepper flakes (optional)",
     "steps": "For onion topping:\n\n1. Grab one onion and cut into thin rings\n2. Season them with salt\n3. Coat the onion rings evenly with flour and make sure to shake off any excess\n4. In a large pot on medium heat add cooking oil and fry the onion rings\n5. Stir regulary and ensure the onions are crispy but not burned usually takes 15 – 20 minutes\n\n\nTomato sauce:\n\n6. Heat one tablespoon of cooking oil and add a grated onion, cook until onion turns golden\n7. Add minced garlic, coriander and red pepper flakes and sauté until fragrant\n8. Introduce tomato sauce and pinch of salt and bring the mixture to a simmer for 15 minutes\n9. Stir in the white vinegar, put heat on low and cover it\n\n\nPrepare the koshari:\n\n10. Bring the rinsed lentils and 1 litre of water to a boil on high heat then reduce the heat to low allowing the lentils to cook until tender (15 minutes).\n11. Drain the lentils and put aside\n12. Soak the rice for 15 minutes in hot water then drain it\n13. In a large pot drop the rice and lentils with 1 tablespoon cooking oil, salt, pepper and coriander, cook and stir regularly for 3 minutes\n14. Add 700ml of water to the rice and lentils and let boil on medium high heat for 5 -8 minutes\n15. Cover the pot and allow it to cook for 20 minutes to assure the lentils and rice are fully cooked and put aside\n16. Simultaneously boil the pasta until soft then drain\n\n\nPutting it together:\n\n1.  Grab a large platter and place the rice and lentils at the base\n2. Top with the drained pasta the tomato sauce\n3. Finally garnish with the crispy onions\n",
-    "imageResId": "2131165423",
+    "imageResId": "koshari",
     "country": "Egyptian"
   },
   {
@@ -12,7 +12,7 @@
     "description": "Tabouleh is a vibrant and refreshing salad originating from Lebanon that is considered a national treasure.",
     "ingredients": "95 g washed and soaked (7 min) bulgur wheat\n4 small tomatoes chopped into small cubes\n1 English cucumber chopped into small cubes\n200 g washed parsley with stems removed finely chopped\n15 g washed mint leaves with stems removed finely chopped\n4 green onions chopped very finely\nSalt (to taste)\n4 tbsp lemon juice\n4 tbsp Olive oil\nHandful of pomegranate seeds",
     "steps": "1. In a large bowl, add the bulgur wheat, tomatoes, cucumber, parsley, mint, green onions, salt, lemon juice and olive oil.\n2. Mix well.\n3. Garnish with pomegranate seeds and serve.",
-    "imageResId": "2131165425",
+    "imageResId": "tabbouleh",
     "country": "Lebanese"
   },
   {
@@ -20,7 +20,7 @@
     "description": "Arayes is a delightful dish that is popular in Palestine that offers a delightful textural contrast between juicy and tender.",
     "ingredients": "500 g ground beef\n1 medium onion finely chopped\n2 minced cloves of garlic\n½ tsp ground cumin\n½ tsp ground coriander\n¼ tsp paprika\n Pinch of pepper flakes(optional)\nSalt and pepper to taste\n2 tablespoons of Olive oil\n15 g chopped parsley\n 15 g chopped mint leaves\n\n\n For the bread:\n 4 large pita breads\n 30 ml Olive oil \n\n\n For serving:\nTahini\nchopped tomatoes, onions and parsley",
     "steps": "1.In a large bowl, combine the ground meat, onion, garlic, spices, salt, pepper, and olive oil. Mix well until evenly combined.\n2. Add the parsley and mint and mix again.\n3. Cut the pita breads in half and open them up.\n4. Spread the meat mixture evenly on one side of the pita breads and close them.\n5. Brush the outside of the pita breads with olive oil.\n6. Heat a large skillet over medium heat and cook the pita breads for 3-4 minutes on each side until golden brown.\n7. Serve with tahini sauce and chopped tomatoes, onions and parsley.",
-    "imageResId": "2131165422",
+    "imageResId": "arayes",
     "country": "Palestinian"
   },
   {
@@ -28,14 +28,15 @@
     "description":"A hearty and flavorful soup packed with protein and vegetables that originated in Jordan.",
     "ingredients": "150 g washed red lentils\n1 medium onion chopped\n1 medium carrot chopped\n2 cloves minced garlic\n1 tbsp olive oil\n4 cups vegetable broth\n1 can diced tomates (undrained)\n1 tsp ground cumin\n½ tsp salt\n¼ tsp black pepper",
     "steps": "1. In a large pot, heat the olive oil over medium heat.\n2. Add the onion and cook until softened, about 5 minutes.\n3. Add the garlic and cook for another minute, until fragrant.\n4. Add the carrots, lentils, broth, tomatoes, cumin, salt, and pepper. Bring to a boil, then reduce heat and simmer for 20-25 minutes, or until the lentils are tender.\n5. Taste and adjust seasonings as needed, Serve hot.",
-    "imageResId": "2131165421"
+    "imageResId": "adas",
+    "country": "Jordanian"
   },
   {
     "name": "Machboos djaj",
     "description": "Machboos djaj is a traditional dish from Kuwait that is a staple in the country and is served on special occasions.",
     "ingredients":"1kg chicken pieces\n2 tbsp vegetable oil\n1 Large onion sliced thinly\n4 cloves minced garlic\n1tsp ground cardamom\n½ tsp ground cloves\n½ tsp ground ginger\n¼ tsp tumeric\n¼ tsp black pepper\n½ tsp salt\n3 cups rinsed white rice\n2 cups chicken broth\n½ cup raisins\n¼ cup chopped almonds (toasted)\n¼ cup chopped cilantro",
     "steps":"1. Heat oil in a large pot over medium heat. Add chicken pieces and cook until golden brown on all sides. Remove from pot and set aside.\n2. In the same pot, add sliced onions and cook until softened and golden, about 10 minutes.\n3. Add garlic, cardamom, cloves, ginger, turmeric, black pepper, and salt. Stir fry for 1 minute until fragrant.\n4. Add the rinsed rice and stir to coat with the spices.\n5. Pour in the chicken broth and bring to a boil. Reduce heat, cover the pot, and simmer for 10 minutes.\n6. Arrange the browned chicken pieces on top of the rice, pushing them slightly into the rice. Scatter raisins over the top.\n7. Cover the pot tightly and simmer for another 15-20 minutes, or until the rice is cooked through and the chicken is tender.\n8. Fluff the rice gently with a fork, taking care not to break the chicken pieces.\n9. Garnish with toasted almonds and fresh cilantro (optional) and serve hot.",
-    "imageResId": "2131165424",
+    "imageResId": "majboos",
     "country": "Kuwaiti"
   }
 ]

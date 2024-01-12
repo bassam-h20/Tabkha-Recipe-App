@@ -1,5 +1,6 @@
 package com.example.tabkha
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -13,6 +14,7 @@ class RecipeDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRecipeDetailBinding
 
+    @SuppressLint("DiscouragedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRecipeDetailBinding.inflate(layoutInflater)
@@ -23,10 +25,11 @@ class RecipeDetailActivity : AppCompatActivity() {
         val recipeDescription = intent.getStringExtra("recipe_description") ?: "Recipe Description"
         val recipeIngredients = intent.getStringExtra("recipe_ingredients") ?: "Recipe Ingredients"
         val recipeSteps = intent.getStringExtra("recipe_steps") ?: "Recipe Steps"
-        val imageResId = intent.getIntExtra("image_res_id", R.drawable.recipe_img_koshari_drawable)
+        val imageDrawableName = intent.getStringExtra("image_drawable_name") ?: "recipe_img_koshari_drawable"
         val recipeCountry = intent.getStringExtra("recipe_country") ?: "Country Name"
+        val imageResId = resources.getIdentifier(imageDrawableName, "drawable", packageName)
 
-        // Set data to views
+// Set data to views
         binding.imageRecipeDetail.setImageResource(imageResId)
         binding.textRecipeNameDetail.text = recipeName
         binding.textRecipeDescription.text = recipeDescription
