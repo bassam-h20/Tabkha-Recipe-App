@@ -24,6 +24,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         val recipeIngredients = intent.getStringExtra("recipe_ingredients") ?: "Recipe Ingredients"
         val recipeSteps = intent.getStringExtra("recipe_steps") ?: "Recipe Steps"
         val imageResId = intent.getIntExtra("image_res_id", R.drawable.recipe_img_koshari_drawable)
+        val recipeCountry = intent.getStringExtra("recipe_country") ?: "Country Name"
 
         // Set data to views
         binding.imageRecipeDetail.setImageResource(imageResId)
@@ -31,6 +32,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         binding.textRecipeDescription.text = recipeDescription
         binding.textRecipeIngredients.text = recipeIngredients
         binding.textRecipeSteps.text = recipeSteps
+        binding.textRecipeCountry.text = recipeCountry
 
         val btnFavorite: ImageButton = binding.btnFavorite
 

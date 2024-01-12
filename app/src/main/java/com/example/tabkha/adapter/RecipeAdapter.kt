@@ -109,6 +109,7 @@ class RecipeAdapter(private val context: Context, private val onFavoriteClick: (
                 putExtra("recipe_ingredients", recipe.ingredients)
                 putExtra("recipe_steps", recipe.steps)
                 putExtra("image_res_id", recipe.imageResId)
+                putExtra("recipe_country", recipe.country)
             }
 
             // Start the activity

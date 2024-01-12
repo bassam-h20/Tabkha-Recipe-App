@@ -2,22 +2,30 @@ package com.example.tabkha.ui.search
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tabkha.RecipeDetailActivity
-import com.example.tabkha.databinding.FragmentSearchBinding
 import com.example.tabkha.RecipeUtils
 import com.example.tabkha.adapter.RecipeAdapter
+import com.example.tabkha.databinding.FragmentSearchBinding
 import com.example.tabkha.model.Recipe
 
 class SearchFragment : Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var countrySpinner: Spinner
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecipeAdapter
+
+    private val countries = listOf("Egyptian", "Lebanese", "Palestinian", "Jordanian", "Kuwaiti")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,12 +35,28 @@ class SearchFragment : Fragment() {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val recyclerView: RecyclerView = binding.recyclerView
-        // Initialize the adapter and set it to the RecyclerView
-        val adapter = RecipeAdapter(requireContext()) { recipe ->
+        recyclerView = binding.recyclerView
+        adapter = RecipeAdapter(requireContext()) { recipe ->
             RecipeUtils.addToFavorites(recipe, requireContext())
         }
         recyclerView.adapter = adapter
+
+        countrySpinner = binding.spinnerCategories
+        val countryAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, countries)
+        countryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        countrySpinner.adapter = countryAdapter
+
+        // Set the item selected listener for the Spinner
+        countrySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selectedCountry = countries[position]
+                filterRecipesByCountry(selectedCountry)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Handle the case when nothing is selected
+            }
+        }
 
         // Access the SearchView
         val searchView = binding.searchView
@@ -80,7 +104,16 @@ class SearchFragment : Fragment() {
         }
     }
 
+    private fun filterRecipesByCountry(country: String) {
+        val allRecipes = RecipeUtils.parseJsonFile(resources)
+        val filteredRecipes = allRecipes.filter { recipe ->
+            recipe.country.equals(country, ignoreCase = true)
+        }
+        adapter.submitList(filteredRecipes)
+    }
 }
+
+
 
 //class SearchFragment : Fragment() {
 //

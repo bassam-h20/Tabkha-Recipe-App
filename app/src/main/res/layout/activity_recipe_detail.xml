@@ -42,10 +42,28 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/headerTextRecipeDescription"
+            android:id="@+id/headerTextRecipeCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textRecipeNameDetail"
+            android:layout_marginTop="24dp"
+            android:text="Country"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/textRecipeCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerTextRecipeCountry"
+            android:layout_marginTop="8dp"
+            android:text="Recipe Country"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/headerTextRecipeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRecipeCountry"
             android:layout_marginTop="24dp"
             android:text="Description"
             android:textSize="28sp" />

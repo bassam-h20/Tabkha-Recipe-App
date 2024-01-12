@@ -3,11 +3,13 @@ package com.example.tabkha.ui.search
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.tabkha.model.Recipe
 
 class SearchViewModel : ViewModel() {
+    private val _allRecipes = MutableLiveData<List<Recipe>>()
+    val allRecipes: LiveData<List<Recipe>> get() = _allRecipes
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is search Fragment"
+    fun setRecipes(recipes: List<Recipe>) {
+        _allRecipes.value = recipes
     }
-    val text: LiveData<String> = _text
 }
