@@ -38,5 +38,33 @@
     "steps":"1. Heat oil in a large pot over medium heat. Add chicken pieces and cook until golden brown on all sides. Remove from pot and set aside.\n2. In the same pot, add sliced onions and cook until softened and golden, about 10 minutes.\n3. Add garlic, cardamom, cloves, ginger, turmeric, black pepper, and salt. Stir fry for 1 minute until fragrant.\n4. Add the rinsed rice and stir to coat with the spices.\n5. Pour in the chicken broth and bring to a boil. Reduce heat, cover the pot, and simmer for 10 minutes.\n6. Arrange the browned chicken pieces on top of the rice, pushing them slightly into the rice. Scatter raisins over the top.\n7. Cover the pot tightly and simmer for another 15-20 minutes, or until the rice is cooked through and the chicken is tender.\n8. Fluff the rice gently with a fork, taking care not to break the chicken pieces.\n9. Garnish with toasted almonds and fresh cilantro (optional) and serve hot.",
     "imageResId": "majboos",
     "country": "Kuwaiti"
+  },
+  {
+    "name": "Knafeh",
+    "description": "A Middle Eastern pastry featuring a crispy, shredded dough base filled with sweet cheese and topped with a buttery sugar syrup.",
+    "ingredients":"Filling:\n\n\n500 g Nabulsi cheese (or ricotta, mozzarella, or mixture)\n1/4 cup sugar\n1/4 cup rosewater (optional)\n1/4 tsp ground cardamom\nCrust:\n\n\n500 g kataifi dough (shredded filo dough)\n1 cup clarified butter (ghee)\nSyrup:\n\n\n1 cup water\n1 cup sugar\n1/2 lemon, juiced (optional)\n1/4 tsp rosewater (optional)\nGarnish:\n1/2 cup chopped pistachios (optional)",
+    "steps":"1. Fill: Crumble cheese, mix with sugar, rosewater (if using), and cardamom.\n2. Syrup: Boil water and sugar, cool.\n3. Preheat oven to 375°F (190°C).\n4. Crust: Melt butter, toss kataifi with butter.\n5. Assemble: Grease dish, spread half of kataifi, add filling, cover with remaining kataifi.\n6. Bake 20-25 minutes, golden brown.\n7. Cool syrup, pour over hot knafeh.\n8. Cool slightly, cut, serve warm.",
+    "imageResId": "knafeh",
+    "country": "Palestinian"
+
+  },
+
+  {
+    "name": "Kabsa",
+    "description": "A traditional Kuwaiti dish that is a staple in the country and is served on special occasions.",
+    "ingredients":"1 kg chicken pieces\n2 tbsp vegetable oil\n1 Large onion sliced thinly\n4 cloves minced garlic\n1tsp ground cardamom\n½ tsp ground cloves\n½ tsp ground ginger\n¼ tsp tumeric\n¼ tsp black pepper\n½ tsp salt\n3 cups rinsed white rice\n2 cups chicken broth\n½ cup raisins\n¼ cup chopped almonds (toasted)\n¼ cup chopped cilantro",
+    "steps":"1. Heat oil in a large pot over medium heat. Add chicken pieces and cook until golden brown on all sides. Remove from pot and set aside.\n2. In the same pot, add sliced onions and cook until softened and golden, about 10 minutes.\n3. Add garlic, cardamom, cloves, ginger, turmeric, black pepper, and salt. Stir fry for 1 minute until fragrant.\n4. Add the rinsed rice and stir to coat with the spices.\n5. Pour in the chicken broth and bring to a boil. Reduce heat, cover the pot, and simmer for 10 minutes.\n6. Arrange the browned chicken pieces on top of the rice, pushing them slightly into the rice. Scatter raisins over the top.\n7. Cover the pot tightly and simmer for another 15-20 minutes, or until the rice is cooked through and the chicken is tender.\n8. Fluff the rice gently with a fork, taking care not to break the chicken pieces.\n9. Garnish with toasted almonds and fresh cilantro (optional) and serve hot.",
+    "imageResId": "kabsa",
+    "country": "Kuwaiti"
+  },
+
+  {
+    "name": "Mansaf",
+    "description": "The national dish of Jordan, featuring tender lamb nestled in fluffy rice, bathed in a tangy yogurt sauce.",
+    "ingredients":"Meat:\n\n\n1 kg lamb shoulder, cut into bite-sized pieces\n1 tbsp olive oil\n1 onion, chopped\n4 cloves garlic, minced\n1 tsp ground allspice\n1/2 tsp black pepper\n1/2 tsp salt\nJameed sauce:\n\n\n500 g jameed (dried yogurt balls)\n4 cups water\n1/2 cup olive oil\nSalt to taste\nRice:\n\n\n2 cups long-grain white rice, washed\n4 cups water\nSalt to taste\nServing:\n\n\nMarkook or shrak flatbread\nRoasted almonds and pine nuts (optional)",
+    "steps":"",
+    "imageResId": "mansaf",
+    "country": "Jordanian"
   }
+
 ]
