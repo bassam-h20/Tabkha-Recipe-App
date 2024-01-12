@@ -2,12 +2,14 @@ package com.example.tabkha.ui.home
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.tabkha.R
 import com.example.tabkha.RecipeUtils
 import com.example.tabkha.adapter.RecipeAdapter
 import com.example.tabkha.databinding.FragmentHomeBinding
@@ -39,6 +41,8 @@ class HomeFragment : Fragment() {
 
         val recipes = RecipeUtils.parseJsonFile(resources)
         adapter.submitList(recipes)
+
+        Log.d("###################################", getDrawableId("recipe_img_koshari_drawable").toString())
 
         return root
     }
