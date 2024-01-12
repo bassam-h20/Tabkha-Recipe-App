@@ -72,7 +72,7 @@ class SearchFragment : Fragment() {
                             putExtra("recipe_description", matchingRecipe.description)
                             putExtra("recipe_ingredients", matchingRecipe.ingredients)
                             putExtra("recipe_steps", matchingRecipe.steps)
-                            putExtra("image_res_id", matchingRecipe.imageResId)
+                            putExtra("image_drawable_name", matchingRecipe.imageResId)
                             putExtra("recipe_country", matchingRecipe.country)
                         }
                         startActivity(intent)

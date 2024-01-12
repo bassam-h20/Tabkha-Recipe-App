@@ -25,7 +25,8 @@ class RecipeDetailActivity : AppCompatActivity() {
         val recipeDescription = intent.getStringExtra("recipe_description") ?: "Recipe Description"
         val recipeIngredients = intent.getStringExtra("recipe_ingredients") ?: "Recipe Ingredients"
         val recipeSteps = intent.getStringExtra("recipe_steps") ?: "Recipe Steps"
-        val imageDrawableName = intent.getStringExtra("image_drawable_name") ?: "recipe_img_koshari_drawable"
+//        val imageDrawableName = intent.getStringExtra("image_drawable_name") ?: "recipe_img_koshari_drawable"
+        val imageDrawableName = intent.getStringExtra("image_drawable_name") ?: "adas"
         val recipeCountry = intent.getStringExtra("recipe_country") ?: "Country Name"
         val imageResId = resources.getIdentifier(imageDrawableName, "drawable", packageName)
 

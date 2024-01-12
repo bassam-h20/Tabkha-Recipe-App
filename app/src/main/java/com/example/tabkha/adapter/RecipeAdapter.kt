@@ -111,7 +111,7 @@ class RecipeAdapter(private val context: Context, private val onFavoriteClick: (
                 putExtra("recipe_description", recipe.description)
                 putExtra("recipe_ingredients", recipe.ingredients)
                 putExtra("recipe_steps", recipe.steps)
-                putExtra("image_res_id", recipe.imageResId)
+                putExtra("image_drawable_name", recipe.imageResId)
                 putExtra("recipe_country", recipe.country)
             }
 
