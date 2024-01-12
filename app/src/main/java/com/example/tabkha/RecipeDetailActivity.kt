@@ -1,5 +1,7 @@
 package com.example.tabkha
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
@@ -30,9 +32,35 @@ class RecipeDetailActivity : AppCompatActivity() {
         binding.textRecipeIngredients.text = recipeIngredients
         binding.textRecipeSteps.text = recipeSteps
 
-        val btnFavorite: ImageButton = findViewById(R.id.btnFavorite)
+        val btnFavorite: ImageButton = binding.btnFavorite
 
-        binding.btnFavorite.setOnClickListener { /* Handle click */ }
+        // Load favorites from SharedPreferences
+        val preferences: SharedPreferences = getSharedPreferences("Favorites", Context.MODE_PRIVATE)
+        val favoritesSet: MutableSet<String> = preferences.getStringSet("favoritesSet", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+
+        // Set favorite icon based on the current status
+        if (isFavorite(recipeName, favoritesSet)) {
+            btnFavorite.setImageResource(R.drawable.ic_favorite_red_filled_24dp)
+        } else {
+            btnFavorite.setImageResource(R.drawable.ic_favorite_24dp)
+        }
+
+        btnFavorite.setOnClickListener {
+            // Toggle the favorite status
+            if (isFavorite(recipeName, favoritesSet)) {
+                favoritesSet.remove(recipeName)
+                btnFavorite.setImageResource(R.drawable.ic_favorite_24dp)
+            } else {
+                favoritesSet.add(recipeName)
+                btnFavorite.setImageResource(R.drawable.ic_favorite_red_filled_24dp)
+            }
+
+            // Save the updated favorites to SharedPreferences
+            preferences.edit().putStringSet("favoritesSet", favoritesSet).apply()
+        }
+    }
+
+    private fun isFavorite(recipeName: String, favoritesSet: Set<String>): Boolean {
+        return favoritesSet.contains(recipeName)
     }
 }
-

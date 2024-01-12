@@ -47,8 +47,6 @@ class FavoritesFragment : Fragment() {
         adapter.submitList(favoriteRecipes)
     }
 
-    // ...
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
